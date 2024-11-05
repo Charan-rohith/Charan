@@ -1,0 +1,288 @@
+/* General styles for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Start from the top */
+    height: 100vh; /* Full height */
+    margin: 0; /* Remove default margin */
+    background: linear-gradient(to bottom right, #e3f2fd, #bbdefb); /* Light gradient background */
+}
+
+/* Center container for the login form */
+.center-container {
+    padding-top: 20px;
+}
+
+/* Styles for the credentials section */
+#credentials {
+    background: white; /* White background for contrast */
+    padding: 20px; /* Inner padding */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    max-width: 300px; /* Max width for professionalism */
+    margin: auto; /* Centering */
+    transition: opacity 0.5s;
+}
+
+/* Logo styles */
+.logo-container {
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+.logo {
+    max-width: 40%; /* Responsive logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Input styles */
+input[type="text"],
+input[type="password"] {
+    width: 90%; /* Full width */
+    padding: 10px; /* Inner padding */
+    margin: 10px 0; /* Vertical spacing */
+    border: 1px solid #90caf9; /* Light blue border */
+    border-radius: 8px; /* Softer corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #64b5f6; /* Darker blue on focus */
+}
+
+/* Button styles */
+button {
+    background-color: #4CAF50; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 12px 20px; /* Padding */
+    border-radius: 8px; /* Softer corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Error message styling */
+#errorMessage {
+    color: red; /* Red text for errors */
+    margin-bottom: 10px; /* Spacing below error message */
+}
+
+/* Header styles */
+header {
+    background-color: #ffffff; /* White background for the header */
+    padding: 20px; /* Padding around the header */
+    width: 100%; /* Full width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 0; /* Remove any default margin */
+    position: relative; /* Position relative for any future positioning */
+    display: none; /* Initially hidden */
+    transition: opacity 0.5s; /* Transition for fading in */
+}
+
+/* Search container styles */
+.search-container {
+    display: flex;
+    justify-content: center; /* Center the group horizontally */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+}
+
+.input-group {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    border-radius: 4px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    width: 50%; /* Adjust width as needed */
+    padding-left: 25%;
+}
+
+#objectSelect {
+    border: none; /* Remove border */
+    padding: 10px; /* Padding for the dropdown */
+    cursor: pointer; /* Pointer on hover */
+    border-radius: 8px 0 0 8px; /* Rounded corners for the left side */
+    height: 35px; /* Consistent height */
+    background-color: #bbdefb; /* Light blue background */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+#objectSelect:hover {
+    background-color: #90caf9; /* Darker blue on hover */
+}
+
+#searchInput {
+    border: none; /* Remove border */
+    padding: 10px; /* Padding for the input */
+    flex: 1; /* Allow input to grow */
+    min-width: 10px; /* Minimum width */
+    border-radius: 0; /* No rounded corners */
+    height: 15px; /* Consistent height */
+    background-color: #ffffff; /* White background */
+}
+
+#searchButton {
+    border: none; /* Remove border */
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Button padding */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    border-radius: 0 8px 8px 0; /* Rounded corners for the right side */
+    height: 35px; /* Consistent height */
+}
+
+#searchButton:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+/* Table styles */
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0px; /* Space above the table */
+    background-color: #ffffff; /* White background for the table */
+    border-radius: 0px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+}
+
+th, td {
+    border: 1px solid #ccc; /* Light gray border */
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f1f1; /* Light gray for header */
+    font-weight: bold; /* Bold text for header */
+}
+
+tr:hover {
+    background-color: #e0e0e0; /* Highlight row on hover */
+}
+
+/* Loader styles */
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px; /* Adjust size */
+    height: 40px; /* Adjust size */
+    animation: spin 1s linear infinite;
+    position: fixed; /* Position it centrally */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.container {
+    display: flex; /* Use flexbox for the container */
+}
+
+.object-names {
+    display: block; /* Use flexbox to arrange items in a row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    width: 20%; /* Set width for the object names container */
+    background-color: #f0f0f0; /* Optional: Background color for visibility */
+    padding: 10px; /* Padding around the container */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
+    height: 100vh; /* Optional: Full height of the viewport */
+    overflow-y: auto; /* Enable scrolling if needed */
+}
+
+.object-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+
+.data-display {
+    width: 80%;
+    padding-left: 10px;
+    /* padding-right: 10px; */
+    padding-top: 0px;
+    /* Add any other styles you need */
+}
+
+.header-content {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Add some padding */
+   
+}
+
+.logo1 {
+    cursor: pointer; /* Change cursor to pointer for logo */
+    max-width: 100px; /* Set max width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0px; /* Space between logo and search */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background with opacity */
+}
+
+.modal-content {
+    background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+    margin: 10% auto; /* Reduce margin for better centering */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Width of modal */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.modal-heading {
+    font-size: 1.5em; /* Larger font size for the heading */
+    margin-bottom: 10px; /* Space below heading */
+    color: #333; /* Darker color for contrast */
+}
+
+.modal-divider {
+    margin: 5px 0;
+    border: 1px solid #ccc; /* Light gray line */
+}
+
+.record-item {
+    margin-bottom: 10px; /* Space between records */
+}
+
+.custom-link {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.custom-link:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.no-records {
+    color: #666; /* Gray color for no records found message */
+    font-style: italic; /* Italics for differentiation */
+}
+
+
+

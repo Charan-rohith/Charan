@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CTMS Object Fetcher</title>
+</head>
+<body>
+    <header id="header" style="display: none;">
+        <div class="header-content">
+            <img src="image/logo5.jpeg" alt="My Logo1" class="logo1" id="logo1">
+            <div class="search-container">
+                <div class="input-group">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                    <button id="searchButton">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+    <div class="center-container">
+        <div id="errorMessage" style="display: none; color: red; margin-bottom: 10px;"></div>
+       
+        <div id="credentials">
+            <div class="logo-container">
+                <img src="image/logo5.jpeg" alt="My Logo" class="logo">
+            </div>
+            <label for="username"><b>Username:</b></label>
+            <input type="text" id="username" /><br/>
+            <label for="password"><b>Password:</b></label>
+            <input type="password" id="password" />
+            <button id="logIn">Log In</button>
+        </div>
+    </div>
+   
+    <div class="container">
+        <div id="objectNamesContainer" class="object-names" style="display: none;"></div> <!-- Object names displayed here -->
+       
+    </div>
+   
+
+    <div id="dataModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div id="modalDataContent"></div>
+        </div>
+    </div>
+
+    <div id="loadingIndicator" class="loader" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- <div id="dataDisplayContainer" class="data-display" style="display: none;"></div> Data will be shown here -->
+  <!-- <div id="dataModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="modalDataContent"></div>
+        </div>
+    </div> -->
